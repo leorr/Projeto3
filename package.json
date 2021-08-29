@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/leorr/Projeto3#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
-    "mongodb": "^4.1.1"
+    "express-validator": "^6.12.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.1.1",
+    "mongoose": "^6.0.2"
   }
 }
