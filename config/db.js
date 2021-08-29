@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 // Replace this with your MONGOURI.
 const MONGOURI = "mongodb+srv://admin:p3p3p3@cluster0.qhghp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
@@ -15,4 +15,4 @@ const InitiateMongoServer = async () => {
   }
 };
 
-module.exports = InitiateMongoServer;
+export default InitiateMongoServer;

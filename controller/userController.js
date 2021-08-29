@@ -1,12 +1,9 @@
-// Filename : userController.js
-
-const express = require("express");
-const { check, validationResult} = require("express-validator");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
+import express from "express";
+import { check, validationResult} from "express-validator";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import User from "../model/User.js";
 const router = express.Router();
-
-const User = require("../model/User");
 
 /**
  * @method - POST
@@ -34,27 +31,25 @@ router.post(
 
         const {
             username,
-            email,
             password
         } = req.body;
         try {
             let user = await User.findOne({
-                email
+               username 
             });
             if (user) {
                 return res.status(400).json({
                     msg: "User Already Exists"
                 });
-            }
+            }//verifica de username já foi pego
 
             user = new User({
                 username,
-                email,
                 password
-            });
+            });// se não constroi novo objeto user com os parametros recebidos pela api
 
             const salt = await bcrypt.genSalt(10);
-            user.password = await bcrypt.hash(password, salt);
+            user.password = await bcrypt.hash(password, salt);//criptografia de senha
 
             await user.save();
 
@@ -62,7 +57,7 @@ router.post(
                 user: {
                     id: user.id
                 }
-            };
+            };//payload p/ gerar token de acesso
 
             jwt.sign(
                 payload,
@@ -75,7 +70,7 @@ router.post(
                         token
                     });
                 }
-            );
+            );//gera e retorna token
         } catch (err) {
             console.log(err.message);
             res.status(500).send("Error in Saving");
@@ -83,4 +78,4 @@ router.post(
     }
 );
 
-module.exports = router;
+export default router;

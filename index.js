@@ -1,6 +1,6 @@
-const express = require("express");
-const userController = require("./controller/userController");
-const InitiateMongoServer = require("./config/db");
+import express from "express";
+import userController from "./controller/userController.js";
+import InitiateMongoServer from "./config/db.js";
 
 InitiateMongoServer();
 
@@ -11,18 +11,15 @@ const PORT = process.env.PORT || 4000;
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.json({ message: "API ✓" });
-});
 
 /**
  * Router Middleware
- * Router - /userController/*
+ * Router - /user/*
  * Method - *
  */
-app.use("/userController", userController);
+app.use("/user", userController);
 
 
-app.listen(PORT, (req, res) => {
+app.listen(PORT, () => {
   console.log(`Node server started at ${PORT}`);
 });
