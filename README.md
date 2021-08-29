@@ -8,7 +8,7 @@ O Bando de dados do mongoDB está sendo hosteado com o serviço gratuito de <a h
 3. Verificação de preenchimento de campos obrigatórios. ✅
 4. Validação de unicidade e autenticidade de campos como email e login. ✅
 5. Permissao de publicação ao apenas ao adminstrador do sistema, verificada com o uso de sessoes. `TODO`
-6. Instalac¸ao da p ˜ agina web em algum servic¸o de hospedagem de aplicações web baseado em PaaS de Cloud Computing. ✅
+6. Instalac¸ao da página web em algum serviço de hospedagem de aplicações web baseado em PaaS de Cloud Computing. ✅
 7. Implementação da funcionalidade de Login. ✅
 8. Implementação da funcionalidade de Cadastramento de usuários. ✅
 9. Implementação da funcionalidade de Publicação de conteudos para o administrador. `TODO`
