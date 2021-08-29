@@ -1,0 +1,23 @@
+{
+  "name": "projeto3",
+  "version": "1.0.0",
+  "description": "Alunos : Leonardo Rodrigues Ribeiro - 1835785</br> Front-end : Foram atualizadas as requests do projeto 2 para atender as demandas do projeto 3 -> https://github.com/leorr/projeto2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leorr/Projeto3.git"
+  },
+  "author": "leorr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leorr/Projeto3/issues"
+  },
+  "homepage": "https://github.com/leorr/Projeto3#readme",
+  "dependencies": {
+    "mongodb": "^4.1.1"
+  }
+}
