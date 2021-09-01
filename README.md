@@ -13,7 +13,7 @@ O projeto utiliza frameworks como <a href = "https://expressjs.com/">Express</a>
 O Bando de dados do mongoDB está sendo hosteado com o serviço gratuito de <a href = "cloud.mongodb.com"> Cloud MongoDB </a>
 
 1. Atendimento as diretrizes de desenvolvimento web apresentadas durante as aulas. ✅
-2. A utilização de Frameworks de desenvolvimento de aplicações web será permitida com autorizacão prévia do professor. ✅
+2. A utilização de Frameworks de desenvolvimento de aplicações web será permitida com autorizacão prévia do professor. `TODO` (verificar mongoose)
 3. Verificação de preenchimento de campos obrigatórios. ✅
 4. Validação de unicidade e autenticidade de campos como email e login. ✅
 5. Permissao de publicação ao apenas ao adminstrador do sistema, verificada com o uso de sessoes. `TODO`
