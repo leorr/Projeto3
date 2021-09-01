@@ -1,11 +1,17 @@
-import express from 'express';
-import { check, validationResult} from 'express-validator';
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-import User from '../model/User.js';
-import auth from '../config/auth.js';
+import express from "express";
+import { check, validationResult} from "express-validator";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import User from "../model/User.js";
+import auth from "../config/auth.js";
 
 const router = express.Router();
+
+/**
+ * @method - POST
+ * @param - /signup
+ * @description - User SignUp
+ */
 
 router.post(
     "/signup",
@@ -133,6 +139,12 @@ router.post(
     }
   }
 );
+
+/**
+ * @method - GET
+ * @description - Get LoggedIn User
+ * @param - /user/me
+ */
 
 router.get("/me", auth, async (req, res) => {
   try {

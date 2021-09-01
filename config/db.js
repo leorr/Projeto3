@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 // Replace this with your MONGOURI.
 const MONGOURI = process.env.MONGODB_URI;
