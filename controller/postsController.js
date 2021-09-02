@@ -47,7 +47,7 @@ router.post(
 	}
 );
 
-router.post(
+router.get(
 	"/search",
 	auth,
 	async (req, res) => {
@@ -61,8 +61,9 @@ router.post(
 			const user = await User.findById(req.user.id);
 			const userId = user.id;
 			const busca =  await Posts.find({userId})
-			const searchString = req.body;
-			var condition = new RegExp(Object.values(searchString));
+			const searchString = req.headers.searchstring;
+			const testing = JSON.stringify(searchString);
+			var condition = new RegExp(Object.values({searchString}));
 			var resultado = busca.filter(function (el) {
 				return condition.test(el.title);
 			});
