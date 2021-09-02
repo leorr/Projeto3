@@ -91,9 +91,7 @@ router.post(
 
 		const { username, password } = req.body;
 		try {
-			let user = await User.findOne({
-				username
-			});
+			let user = await User.findOne({username});
 			if (!user)
 				return res.status(400).json({
 					message: "User Not Exist"

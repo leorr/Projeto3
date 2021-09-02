@@ -47,4 +47,36 @@ router.post(
 	}
 );
 
+router.post(
+	"/search",
+	auth,
+	async (req, res) => {
+		const errors = validationResult(req);
+		if (!errors.isEmpty()) {
+			return res.status(400).json({
+				errors: errors.array()
+			});
+		}
+		try {
+			const user = await User.findById(req.user.id);
+			const userId = user.id;
+			const busca =  await Posts.find({userId})
+			const searchString = req.body;
+			var condition = new RegExp(Object.values(searchString));
+			var resultado = busca.filter(function (el) {
+				return condition.test(el.title);
+			});
+			if (resultado) {
+				return res.json(resultado);
+			} else {
+				res.json("Title not found")
+			}
+		} catch (err) {
+			console.log(err.message);
+			res.status(500).send("Error in searching");
+		}
+	}
+);
+
+
 export default router;
