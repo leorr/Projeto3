@@ -2,7 +2,7 @@
 ### Alunos : Leonardo Rodrigues Ribeiro - 1835785</br>
 
 ### Deploy em : http://projeto3-leorr.herokuapp.com
-### Front em : https://leorr.github.io/projeto2 (falta implementações)
+### Front em : https://projeto2-leorr.herokuapp.com
 
 ### Rotas
 * /user/signup  →  registro **POST** json body requer ***username*** e ***password***
@@ -21,5 +21,5 @@ O Bando de dados do mongoDB está sendo hosteado com o serviço gratuito de <a h
 7. Implementação da funcionalidade de Login. ✅
 8. Implementação da funcionalidade de Cadastramento de usuários. ✅
 9. Implementação da funcionalidade de Publicação de conteudos para o administrador. `TODO`
-10. Implementação da funcionalidade de Busca de conteudo. `TODO`
+10. Implementação da funcionalidade de Busca de conteudo. ✅
 11. Atualizção incremental das mudanças de código-fonte no Git. ✅
